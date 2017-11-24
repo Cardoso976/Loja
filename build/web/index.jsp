@@ -30,7 +30,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="index.html">Fatec Shop</a>
+                        <a class="navbar-brand" href="index.jsp">Fatec Shop</a>
                     </div>
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
@@ -69,7 +69,7 @@
             </div>
             <div>
             </div>
-            <div class="container">   
+           <div class="container">   
                 <!-- Modal -->
                 <div class="modal fade" id="login" role="dialog">
                     <div class="modal-dialog">
@@ -121,45 +121,41 @@
                             <div class="modal-body" style="padding:40px 50px;">
                                 <form role="form">
                                     <div class="form-group">
-                                        <label for="usrname"><span class="glyphicon glyphicon-user"></span> Nome de Usuário</label>
-                                        <input type="text" class="form-control" id="usrname" placeholder="Email">
+                                        <label for="usrname"><span class="glyphicon glyphicon-user"></span> Nome</label>
+                                        <input type="text" class="form-control" id="usrname" placeholder="Nome">
                                     </div>
                                     <div class="form-group">
                                         <label for="ender"><span class="glyphicon glyphicon-home"></span> Endereço </label>
-                                        <input type="text" class="form-control" id="usrname" placeholder="Email">
+                                        <input type="text" class="form-control" id="endereco" placeholder="Endereço">
                                     </div>
                                     <div class="form-group">
                                         <label for="cidade"><span class="glyphicon glyphicon-home"></span> Cidade </label>
-                                        <input type="text" class="form-control" id="usrname" placeholder="Email">
+                                        <input type="text" class="form-control" id="cidade" placeholder="Cidade">
                                     </div>
-                                    <div class="dropdown">
-                                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"> Estado <span class="caret"></span></button>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="#">Teste</a></li>
-                                            <li><a href="#">Teste</a></li>
-                                            <li><a href="#">Teste</a></li>
-                                        </ul>
-                                    </div><br>
+                                    <div class="form-group">
+                                        <label for="cidade"><span class="glyphicon glyphicon-home"></span> Estado </label>
+                                        <input type="text" class="form-control" id="estado" placeholder="Estado">
+                                    </div>
                                     <div class="form-group">
                                         <label for="email"><span class="glyphicon glyphicon-envelope"></span> E-mail </label>
-                                        <input type="text" class="form-control" id="usrname" placeholder="Email">
+                                        <input type="text" class="form-control" id="email" placeholder="Email">
                                     </div>
                                     <div class="form-group">
                                         <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Digite a Senha</label>
-                                        <input type="password" class="form-control" id="psw" placeholder="Senha">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Repita a Senha</label>
-                                        <input type="password" class="form-control" id="psw" placeholder="Senha">
-                                    </div>
+                                        <input type="password" class="form-control" id="senha" placeholder="Senha">
+                                    </div>                                    
                                     <!--<div class="checkbox">
                                          <label><input type="checkbox" value="" checked>Lembrar-me</label>
                                      </div>-->
-                                    <button type="submit" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-off"></span> Registre-se</button>
+                                    <button type="submit" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-off"></span> 
+                                        Registre-se
+                                    </button>
                                 </form>
                             </div>
                             <div class="modal-footer">
-                                <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancelar</button>                                
+                                <button id="btn_cancelar" type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> 
+                                    Cancelar
+                                </button>                                
                             </div>
                         </div>
                     </div>
