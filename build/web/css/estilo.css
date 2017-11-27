@@ -31,3 +31,10 @@ img{
     vertical-align: middle;
     white-space: nowrap;
 }
+
+#container_img{
+    max-width:150px;
+    max-height:220px;
+    width: auto;
+    height: auto;
+}

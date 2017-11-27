@@ -11,14 +11,14 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="Rodrigo Caio Vinicius Jhow" content="">
+        <meta name="Rodrigo Caio Vinicius Jhonatan" content="">
         <title>Fatec Shop</title> 
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>        
         <link href="css/estilo.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="css/bootstrap.css" type="text/css">     
     </head>
 
-    <body>        
+    <body>
 
         <div class="container">
             <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -34,7 +34,7 @@
                     </div>
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li><a href="produtos.html">Produtos</a></li>                            
+                            <li><a href="produtos.jsp">Produtos</a></li>                            
                             <li><a href="sobre.html">Sobre</a></li>
                             <li><a href="servicos.html">Serviços</a></li>
                             <li><a href="contato.html">Contato</a></li>
@@ -43,9 +43,22 @@
                             <li>
                                 <a href="#" id="cart"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span><span class="badge">3</span></a>
                             </li>
+                            <%
+                                if (session.getAttribute("login") == null) {
+                            %>
                             <li>
-                                <a class="btn btn-large" href="#" id="logar" data-toggle="modal" data-target="#login">Login</a>
+                                <a class="btn btn-large" href="#" id="logar" data-toggle="modal" data-target="#login">Login</a>                        
                             </li>
+                            <%
+                            } else {
+                                String login = (String) session.getAttribute("login");
+                            %>
+                            <li>
+                               <a class="btn btn-large" href="#">Olá <%=session.getAttribute("login")%></a>
+                           </li>
+                            <%
+                                }
+                            %>
                         </ul>
                     </div>     
                 </div>
@@ -53,7 +66,7 @@
             <div class="container">
                 <header class="jumbotron cabecalho">
                     <h1>Bem vindo!</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
+                    <p align="justify">Seja bem vindo! É uma satisfação poder receber sua visita em nossa loja virtual, navegue em nossa loja e conheça os ótimos produtos que temos a lhe oferecer. Você também poderá tirar todas suas dúvidas clicando nas páginas do menu ou enviando uma mensagem para nós. Será uma satisfação poder atendê-lo! Sinta-se à vontade para entrar em contato e perguntar tudo que desejar.</p>
                 </header>                   
 
                 <hr>
@@ -69,7 +82,7 @@
             </div>
             <div>
             </div>
-           <div class="container">   
+            <div class="container">   
                 <!-- Modal -->
                 <div class="modal fade" id="login" role="dialog">
                     <div class="modal-dialog">
@@ -81,14 +94,14 @@
                                 <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
                             </div>
                             <div class="modal-body" style="padding:40px 50px;">
-                                <form role="form">
+                                <form role="form" action="validar.jsp" method= "POST">
                                     <div class="form-group">
                                         <label for="usrname"><span class="glyphicon glyphicon-user"></span> Usuário</label>
-                                        <input type="text" class="form-control" id="usrname" placeholder="Email">
+                                        <input type="text" class="form-control" name="email" placeholder="Email">
                                     </div>
                                     <div class="form-group">
                                         <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Senha</label>
-                                        <input type="password" class="form-control" id="psw" placeholder="Senha">
+                                        <input type="password" class="form-control" name="senha" placeholder="Senha">
                                     </div>
                                     <div class="checkbox">
                                         <label><input type="checkbox" value="" checked>Lembrar-me</label>
@@ -99,7 +112,7 @@
                             <div class="modal-footer">
                                 <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancelar</button>
                                 <p>Não é inscrito? <a href="#" id="registrar" data-toggle="modal" data-target="#registro">Registre-se</a></p>
-                                <p>Esqueceu a <a href="#">Senha?</a></p>
+                                
                             </div>
                         </div>
                     </div>
@@ -119,34 +132,31 @@
                                 <h4><span class="glyphicon glyphicon-plus-sign"></span> Registre-se</h4>
                             </div>
                             <div class="modal-body" style="padding:40px 50px;">
-                                <form role="form">
+                                <form role="form" action="incluir_cliente.jsp" method= "POST">
                                     <div class="form-group">
                                         <label for="usrname"><span class="glyphicon glyphicon-user"></span> Nome</label>
-                                        <input type="text" class="form-control" id="usrname" placeholder="Nome">
+                                        <input type="text" class="form-control" name="nome" placeholder="Nome">
                                     </div>
                                     <div class="form-group">
                                         <label for="ender"><span class="glyphicon glyphicon-home"></span> Endereço </label>
-                                        <input type="text" class="form-control" id="endereco" placeholder="Endereço">
+                                        <input type="text" class="form-control" name="endereco" placeholder="Endereço">
                                     </div>
                                     <div class="form-group">
                                         <label for="cidade"><span class="glyphicon glyphicon-home"></span> Cidade </label>
-                                        <input type="text" class="form-control" id="cidade" placeholder="Cidade">
+                                        <input type="text" class="form-control" name="cidade" placeholder="Cidade">
                                     </div>
                                     <div class="form-group">
                                         <label for="cidade"><span class="glyphicon glyphicon-home"></span> Estado </label>
-                                        <input type="text" class="form-control" id="estado" placeholder="Estado">
+                                        <input type="text" class="form-control" name="estado" placeholder="Estado">
                                     </div>
                                     <div class="form-group">
                                         <label for="email"><span class="glyphicon glyphicon-envelope"></span> E-mail </label>
-                                        <input type="text" class="form-control" id="email" placeholder="Email">
+                                        <input type="text" class="form-control" name="email" placeholder="Email">
                                     </div>
                                     <div class="form-group">
                                         <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Digite a Senha</label>
-                                        <input type="password" class="form-control" id="senha" placeholder="Senha">
-                                    </div>                                    
-                                    <!--<div class="checkbox">
-                                         <label><input type="checkbox" value="" checked>Lembrar-me</label>
-                                     </div>-->
+                                        <input type="password" class="form-control" name="senha" placeholder="Senha">
+                                    </div> 
                                     <button type="submit" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-off"></span> 
                                         Registre-se
                                     </button>
