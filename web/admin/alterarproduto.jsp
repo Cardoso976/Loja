@@ -14,26 +14,24 @@
         <h1>Alteração Cliente</h1>
         <%
             String codigo = request.getParameter("codigo");
-            String nome = request.getParameter("nome");
-            String endereco = request.getParameter("endereco");
-            String cidade = request.getParameter("cidade");
-            String estado = request.getParameter("estado");
-            String email = request.getParameter("email");
-            String senha = request.getParameter("senha");
+            String titulo = request.getParameter("titulo");
+            String autor = request.getParameter("autor");
+            String url = request.getParameter("url");
+            String preco = request.getParameter("preco");
+            String quantidade_estoque = request.getParameter("quantidade_estoque");           
 
             InitialContext contexto = new InitialContext();
             DataSource ds = (DataSource) contexto.lookup("jdbc/loja");
             Connection conexao = ds.getConnection();
 
-            String sql = "UPDATE clientes SET nome=?, endereco=?, cidade=?, estado=?, email=?, senha=? WHERE codigo = ?";
+            String sql = "UPDATE produtos SET titulo=?, autor=?, url=?, preco=?, quantidade_estoque=? WHERE codigo = ?";
             PreparedStatement comando = conexao.prepareStatement(sql);
-            comando.setString(1, nome);
-            comando.setString(2, endereco);
-            comando.setString(3, cidade);
-            comando.setString(4, estado);
-            comando.setString(5, email);
-            comando.setString(6, senha);
-            comando.setInt(7, Integer.parseInt(codigo));
+            comando.setString(1, titulo);
+            comando.setString(2, autor);
+            comando.setString(3, url);
+            comando.setString(4, preco);
+            comando.setString(5, quantidade_estoque);
+            comando.setInt(6, Integer.parseInt(codigo));
 
             if (comando.executeUpdate() > 0) {
                 request.getRequestDispatcher("index.html").forward(request, response);
@@ -42,6 +40,6 @@
             }
             conexao.close();
         %>
-        <a href="index.html">Voltar ao início</a>        
+        <a href="index.html">Voltar ao início</a>
     </body>
 </html>

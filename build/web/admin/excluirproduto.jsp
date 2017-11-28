@@ -15,12 +15,12 @@
             InitialContext contexto = new InitialContext();
             DataSource ds = (DataSource) contexto.lookup("jdbc/loja");
             Connection conexao = ds.getConnection();
-            String sql = "DELETE FROM clientes WHERE codigo = ?";
+            String sql = "DELETE FROM produtos WHERE codigo = ?";
             PreparedStatement comando = conexao.prepareStatement(sql);
             String codigo = request.getParameter("codigo");
             comando.setInt(1, Integer.parseInt(codigo));
             if (comando.executeUpdate() > 0){
-                out.print("<h1>CLIENTE EXCLUÍDO</h1>");
+                out.print("<h1>PRODUTO EXCLUÍDO</h1>");
             } else {
                 out.print("<h1>FALHA NA EXCLUSÃO</h1>");
             }

@@ -1,3 +1,3 @@
-$(document).on('click', '#logar', function(){
+$(document).on('click', '#logar', function () {
     $('#login').show();
-});
+})        

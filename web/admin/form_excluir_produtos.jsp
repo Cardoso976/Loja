@@ -7,8 +7,8 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Exclusão de Clientes</h1>
-        <form method="GET" action ="excluircliente.jsp">
+        <h1>Exclusão de Produtos</h1>
+        <form method="GET" action ="excluirproduto.jsp">
             <input type="number" name="codigo">
             <input type="submit" name="Excluir">           
         </form>

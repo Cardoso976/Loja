@@ -29,11 +29,7 @@
 
             if (res.next()) {
                 session.setAttribute("login", res.getString("nome"));
-                if (email.equals("Admin") && senha.equals("admin")) {
-                    request.getRequestDispatcher("admin/index.html").forward(request, response);
-                } else {
-                    request.getRequestDispatcher("index.jsp").forward(request, response);
-                }
+                request.getRequestDispatcher("index.jsp").forward(request, response);                
             } else {
         %>  
         <h2 style="color:red">

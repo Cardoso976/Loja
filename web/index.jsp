@@ -19,6 +19,15 @@
     </head>
 
     <body>
+        <%
+            String login;
+
+            if (session.getAttribute("login") != null) {
+                login = (String) session.getAttribute("login");
+            } else {
+                login = null;
+            }
+        %>
 
         <div class="container">
             <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -35,31 +44,37 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
                             <li><a href="produtos.jsp">Produtos</a></li>                            
-                            <li><a href="sobre.html">Sobre</a></li>
+                            <li><a href="sobre.html">Sobre</a></li>                              
                             <li><a href="servicos.html">Serviços</a></li>
                             <li><a href="contato.html">Contato</a></li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li>
-                                <a href="#" id="cart"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span><span class="badge">3</span></a>
-                            </li>
+                                <%
+                                    if (login!= null && login.equals("Admin")) {
+                                %>
+                            <li><a href="admin/index.html">ADM</a></li>
                             <%
-                                if (session.getAttribute("login") == null) {
+                                }
+                            %>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">                            
+                            <%
+                                if (login == null) {
                             %>
                             <li>
                                 <a class="btn btn-large" href="#" id="logar" data-toggle="modal" data-target="#login">Login</a>                        
                             </li>
                             <%
                             } else {
-                                String login = (String) session.getAttribute("login");
                             %>
                             <li>
-                               <a class="btn btn-large" href="#">Olá <%=session.getAttribute("login")%></a>
-                           </li>
+                                <a class="btn btn-large" href="#">Olá <%=session.getAttribute("login")%></a>
+                            </li>
+                            <li>
+                                <a class="btn btn-large" href="logout.jsp">Sair</a>
+                            </li>
                             <%
                                 }
                             %>
-                        </ul>
+                        </ul>                        
                     </div>     
                 </div>
             </nav>
@@ -112,7 +127,7 @@
                             <div class="modal-footer">
                                 <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancelar</button>
                                 <p>Não é inscrito? <a href="#" id="registrar" data-toggle="modal" data-target="#registro">Registre-se</a></p>
-                                
+
                             </div>
                         </div>
                     </div>

@@ -1,8 +1,3 @@
-<%-- 
-    Document   : alterarcliente
-    Created on : 22/11/2017, 19:32:45
-    Author     : rodrigo
---%>
 
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.Connection"%>
@@ -41,12 +36,12 @@
             comando.setInt(7, Integer.parseInt(codigo));
 
             if (comando.executeUpdate() > 0) {
-                out.println("<h3>Dados alterados com sucesso.</h3>");
+                request.getRequestDispatcher("index.html").forward(request, response);
             } else {
                 out.println("<h3>FALHA NA ALTERAÇÃO</h3>");
             }
             conexao.close();
         %>
-        <a href="index.html">Voltar ao início</a>
+        <a href="index.html">Voltar ao início</a>        
     </body>
 </html>

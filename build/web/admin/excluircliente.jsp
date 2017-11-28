@@ -1,8 +1,3 @@
-<%-- 
-    Document   : excluircliente
-    Created on : 14/11/2017, 22:09:37
-    Author     : Alunos
---%>
 
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.Connection"%>

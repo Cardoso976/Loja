@@ -1,8 +1,3 @@
-<%-- 
-    Document   : form_excluir_clientes
-    Created on : 14/11/2017, 22:03:33
-    Author     : Alunos
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

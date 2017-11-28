@@ -59,6 +59,8 @@
             }
             out.println("</table>");
             conexao.close();
-        %>        
+        %> 
+        <hr>
+        <a href="index.html">Voltar ao início</a>         
     </body>
 </html>
