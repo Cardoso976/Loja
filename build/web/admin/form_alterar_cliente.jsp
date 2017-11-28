@@ -8,7 +8,6 @@
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="javax.naming.InitialContext"%>
-<%@page import="javax.naming.InitialContext"%>
 <%@page import="javax.sql.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

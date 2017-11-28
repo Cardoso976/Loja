@@ -1,15 +1,5 @@
-<%-- 
-    Document   : index
-    Created on : 24/11/2017, 15:49:53
-    Author     : Rodrigo Cardoso
---%>
 
-<%@page import="javax.sql.DataSource"%>
-<%@page import="java.sql.ResultSet"%>
-<%@page import="java.sql.PreparedStatement"%>
-<%@page import="java.sql.Connection"%>
 
-<%@page import="javax.naming.InitialContext"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="pt">
@@ -83,40 +73,26 @@
                     </div>     
                 </div>
             </nav>
-            <div class="row">
-                <div class="col-lg-12">
-                    <h3>Mais de 100 Milhões de Vendas</h3>
-                    <hr>
-                </div>
-            </div>                   
-            <div class="row text-center">  
-                <%
-                    InitialContext contexto = new InitialContext();
-                    DataSource ds = (DataSource) contexto.lookup("jdbc/loja");
-                    Connection conexao = ds.getConnection();
+            <h1>Sobre nós</h1>
+            <p align="justify">
+            Há mais de 14 anos no mercado, a Fatec-Shop é integrante de uma das maiores distribuidoras de livros do Brasil: a BOOKPartners. Com um catálogo amplo e diversificado composto por mais de 200 mil títulos, a empresa possui as melhores opções em livros de diferentes áreas do conhecimento, como Direito, Medicina, Engenharia e Piscologia, entre outras. E ainda é certificada pelo selo Ebit, que representa a excelência dessa loja virtual.</p>
 
-                    String sql = "SELECT * FROM produtos";
+            <br>
 
-                    PreparedStatement comando = conexao.prepareStatement(sql);
-                    ResultSet res = comando.executeQuery();
+            <img src="img/estoque.png">
 
-                    while (res.next()) {
-                        out.println("<div class=\"col-md-3 col-sm-6 hero-feature\">");
-                        out.println("<div class=\"thumbnail\">");
-                        out.println("<img id=\"container_img\" src=" + res.getString("url") + " />");
-                        out.println("<div class=\"caption\">");
-                        out.println("<h5><b>" + res.getString("titulo") + "</b></h5>");
-                        out.println("<h6>" + res.getString("autor") + "</h6>");
-                        out.println("<p>R$ " + res.getDouble("preco") + "</p>");
-                        out.println("<p><a href=\"#\" class=\"btn btn-primary\" >Compre!</a> <a href=\"#\" class=\"btn btn-default\" >Mais</a></p>");
-                        out.println("</div>");
-                        out.println("</div>");
-                        out.println("</div>");
-                    }
-                    conexao.close();
-                %>            
-            </div>
 
+
+            <p align="justify"><br>Nossa empresa surgiu com o intuito de ser tornar referência no mercado em nossa área de atuação. Temos uma equipe qualificada e eficiente comprometida em superar as expectativas dos nossos clientes. Atuamos com seriedade, transparência e, sobretudo, respeito. Prezamos sempre pela qualidade do atendimento, estando prontos para atender e satisfazer as necessidades dos clientes.</p>
+
+            <br>
+
+            <img src="img/estoque2.jpg" width="740" height="370">
+
+            <p align="justify"><br>A missão da empresa Fatec-Shop é fornecer soluções para empresas de e-commerce e Internet. Nossos principais clientes são leitores apaixonados por classicos. Fundada em 2003 pelos Senhores Caio, Jonathan, Rodrigo e Vinicius, na cidade Garça, onde, atualmente contamos com 500 mil funcionários.
+            <br><br> Além da forte atuação no comércio eletrônico, a Fatec-Shop também está presente no meio físico, com várias lojas espalhadas por todo o país O desempenho da companhia é tão positivo que, em 2016 – pelo segundo ano consecutivo –, a rede ganhou o prêmio “Melhores Prestadores de Serviços do Brasil”, realizado pelo jornal o Estado de São Paulo, em que foi avaliado o índice de satisfação dos clientes ao utilizarem os nossos veículos de atendimento e de prestação de serviço. Conte com as nossas lojas para investir em seu desenvolvimento pessoal e encontrar os melhores títulos para você!</p>    
+
+            <hr>
 
             <footer class="rodape collapse navbar-collapse">
                 <div class="row">

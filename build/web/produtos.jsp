@@ -50,9 +50,8 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
                             <li><a href="produtos.jsp">Produtos</a></li>                            
-                            <li><a href="sobre.html">Sobre</a></li>                              
-                            <li><a href="servicos.html">Serviços</a></li>
-                            <li><a href="contato.html">Contato</a></li>
+                            <li><a href="sobre.jsp">Sobre</a></li>
+                            <li><a href="contato.jsp">Contato</a></li>
                                 <%
                                     if (login != null && login.equals("Admin")) {
                                 %>

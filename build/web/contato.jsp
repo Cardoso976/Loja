@@ -15,7 +15,9 @@
         <title>Fatec Shop</title> 
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>        
         <link href="css/estilo.css" rel="stylesheet" type="text/css"/>
-        <link rel="stylesheet" href="css/bootstrap.css" type="text/css">     
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css">    
+        <link href="css/contato.css" rel="stylesheet" type="text/css"/>
+
     </head>
 
     <body>
@@ -47,12 +49,12 @@
                             <li><a href="sobre.jsp">Sobre</a></li>
                             <li><a href="contato.jsp">Contato</a></li>
                                 <%
-                                    if (login!= null && login.equals("Admin")) {
+                                    if (login != null && login.equals("Admin")) {
                                 %>
                             <li><a href="admin/index.html">ADM</a></li>
-                            <%
-                                }
-                            %>
+                                <%
+                                    }
+                                %>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">                            
                             <%
@@ -78,12 +80,45 @@
                 </div>
             </nav>
             <div class="container">
-                <header class="jumbotron cabecalho">
-                    <h1>Bem vindo!</h1>
-                    <p align="justify">Seja bem vindo! É uma satisfação poder receber sua visita em nossa loja virtual, navegue em nossa loja e conheça os ótimos produtos que temos a lhe oferecer. Você também poderá tirar todas suas dúvidas clicando nas páginas do menu ou enviando uma mensagem para nós. Será uma satisfação poder atendê-lo! Sinta-se à vontade para entrar em contato e perguntar tudo que desejar.</p>
-                </header>                   
+                <section id="contact">
+                    <div class="section-content">
+                        <h1 class="section-header">SAC -  <span class="content-header wow fadeIn " data-wow-delay="0.2s" data-wow-duration="2s">Serviço de Atendimento ao Cliente</span></h1>
+                        <h3>Envie sua dúvida por este canal e a responderemos o quanto antes!</h3>
+                        <p align="center justify">Através deste serviço, você poderá tirar qualquer tipo de dúvida à respeito de produtos, prazos, formas de pagamento,<br> serviço de entrega, posição de pedidos entre outros assuntos.  Sinta-se à vontade para expor<br> sua dificuldade. Estamos prontos para atendê-lo de forma rápida e fácil.</p>
+                    </div>
+                    <div class="contact-section">
+                        <div class="container">
+                            <form>
+                                <div class="col-md-6 form-line">
+                                    <div class="form-group">
+                                        <label for="exampleInputUsername">Seu Nome</label>
+                                        <input type="text" class="form-control" id="" placeholder=" Digite o Nome">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail">E-Mail</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail" placeholder=" Digite o E-mail">
+                                    </div>	
+                                    <div class="form-group">
+                                        <label for="telephone">Celular</label>
+                                        <input type="tel" class="form-control" id="telephone" placeholder=" Digite o Celular">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for ="description"> Mensagem</label>
+                                        <textarea  class="form-control" id="description" placeholder="Escreva sua mensagem"></textarea>
+                                    </div>
+                                    <div>
 
-                <hr>
+                                        <button type="button" class="btn btn-primary submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>  
+                                            Enviar Mensagem
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                </section>
 
                 <footer class="rodape collapse navbar-collapse">
                     <div class="row">
@@ -152,8 +187,8 @@
                                         <input type="text" class="form-control" name="nome" placeholder="Nome">
                                     </div>
                                     <div class="form-group">
-                                        <label for="ender"><span class="glyphicon glyphicon-home"></span> Endereço </label>
-                                        <input type="text" class="form-control" name="endereco" placeholder="Endereço">
+                                        <label for="ender"><span class="glyphicon glyphicon-home"></span> EndereÃ§o </label>
+                                        <input type="text" class="form-control" name="endereco" placeholder="EndereÃ§o">
                                     </div>
                                     <div class="form-group">
                                         <label for="cidade"><span class="glyphicon glyphicon-home"></span> Cidade </label>
