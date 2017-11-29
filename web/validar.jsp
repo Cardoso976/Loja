@@ -29,6 +29,7 @@
 
             if (res.next()) {
                 session.setAttribute("login", res.getString("nome"));
+                session.setAttribute("codigo", res.getInt("codigo"));
                 request.getRequestDispatcher("index.jsp").forward(request, response);                
             } else {
         %>  

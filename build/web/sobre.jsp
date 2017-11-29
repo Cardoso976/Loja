@@ -120,7 +120,7 @@
                             <form role="form" action="validar.jsp" method= "POST">
                                 <div class="form-group">
                                     <label for="usrname"><span class="glyphicon glyphicon-user"></span> Usuário</label>
-                                    <input type="text" class="form-control" name="email" placeholder="Email">
+                                    <input type="text" class="form-control" id="txt_nome" name="email" placeholder="Email">
                                 </div>
                                 <div class="form-group">
                                     <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Senha</label>

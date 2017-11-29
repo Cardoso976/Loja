@@ -1,8 +1,3 @@
-<%-- 
-    Document   : listarclientes
-    Created on : 31/10/2017, 22:19:11
-    Author     : Rosana Garcia
---%>
 
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.PreparedStatement"%>

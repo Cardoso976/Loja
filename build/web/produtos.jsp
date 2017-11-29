@@ -94,18 +94,28 @@
 
                     PreparedStatement comando = conexao.prepareStatement(sql);
                     ResultSet res = comando.executeQuery();
+                    
+                    String id;
 
                     while (res.next()) {
+                        if(session.getAttribute("codigo")==null){
+                            session.setAttribute("codigo", 0);
+                        }
                         out.println("<div class=\"col-md-3 col-sm-6 hero-feature\">");
                         out.println("<div class=\"thumbnail\">");
                         out.println("<img id=\"container_img\" src=" + res.getString("url") + " />");
                         out.println("<div class=\"caption\">");
                         out.println("<h5><b>" + res.getString("titulo") + "</b></h5>");
                         out.println("<h6>" + res.getString("autor") + "</h6>");
-                        out.println("<p>R$ " + res.getDouble("preco") + "</p>");
-                        out.println("<p><a href=\"#\" class=\"btn btn-primary\" >Compre!</a> <a href=\"#\" class=\"btn btn-default\" >Mais</a></p>");
+                        out.println("<p>R$ " + res.getDouble("preco") + "</p>");                       
+                        out.println("<p><a href=incluir_pedido.jsp?codigo="
+                        +res.getInt("codigo")+
+                        "&&preco="+res.getDouble("preco")+
+                        "&&estoque="+res.getInt("quantidade_estoque")+
+                        "&&id="+session.getAttribute("codigo")+
+                        " class=\"btn btn-success\">Compre!</a></p>");
                         out.println("</div>");
-                        out.println("</div>");
+                        out.println("</div>");                        
                         out.println("</div>");
                     }
                     conexao.close();
@@ -139,7 +149,7 @@
                             <form role="form" action="validar.jsp" method= "POST">
                                 <div class="form-group">
                                     <label for="usrname"><span class="glyphicon glyphicon-user"></span> Usuário</label>
-                                    <input type="text" class="form-control" name="email" placeholder="Email">
+                                    <input type="text" class="form-control" id="txt_nome" name="email" placeholder="Email">
                                 </div>
                                 <div class="form-group">
                                     <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Senha</label>

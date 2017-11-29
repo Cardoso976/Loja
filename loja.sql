@@ -28,6 +28,7 @@ CREATE TABLE pedidos(
 	codigo_do_cliente int,
 	codigo_do_produto int, 
 	quantidade_comprada int, 
+	preco_unitario decimal(9,2),
 	CONSTRAINT FOREIGN KEY FK_clientes(codigo_do_cliente)
 		REFERENCES clientes(codigo),
 	CONSTRAINT FOREIGN KEY FK_produtos(codigo_do_produto)
