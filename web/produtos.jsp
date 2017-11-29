@@ -1,8 +1,3 @@
-<%-- 
-    Document   : index
-    Created on : 24/11/2017, 15:49:53
-    Author     : Rodrigo Cardoso
---%>
 
 <%@page import="javax.sql.DataSource"%>
 <%@page import="java.sql.ResultSet"%>
