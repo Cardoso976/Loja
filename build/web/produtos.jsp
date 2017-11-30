@@ -13,7 +13,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="Rodrigo Caio Vinicius Jhonatan" content="">
-        <title>Fatec Shop</title> 
+        <title>Produtos</title> 
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>        
         <link href="css/estilo.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="css/bootstrap.css" type="text/css">     
@@ -103,7 +103,7 @@
                         }
                         out.println("<div class=\"col-md-3 col-sm-6 hero-feature\">");
                         out.println("<div class=\"thumbnail\">");
-                        out.println("<img id=\"container_img\" src=" + res.getString("url") + " />");
+                        out.println("<img id=\"container_img\" src=img/" + res.getString("url") + " />");
                         out.println("<div class=\"caption\">");
                         out.println("<h5><b>" + res.getString("titulo") + "</b></h5>");
                         out.println("<h6>" + res.getString("autor") + "</h6>");

@@ -1,8 +1,3 @@
-<%-- 
-    Document   : index
-    Created on : 24/11/2017, 15:49:53
-    Author     : Rodrigo Cardoso
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -12,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="Rodrigo Caio Vinicius Jhonatan" content="">
-        <title>Fatec Shop</title> 
+        <title>Contato</title> 
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>        
         <link href="css/estilo.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="css/bootstrap.css" type="text/css">    

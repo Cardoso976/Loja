@@ -4,7 +4,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Incluir Produto</title>
     </head>
     <body>
         <h1>Inclusão de Produto</h1>
@@ -51,6 +51,6 @@
                 </tr>                            
             </table>
         </form>       
-        
+        <br><a href="index.html">Voltar ao início</a>
     </body>
 </html>

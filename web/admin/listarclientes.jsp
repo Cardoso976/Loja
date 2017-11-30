@@ -14,7 +14,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Clientes cadastrados na loja!</h1>
+        <h1>Clientes cadastrados na loja.</h1>
         <%
             InitialContext contexto = new InitialContext();
             DataSource ds = (DataSource) contexto.lookup("jdbc/loja");

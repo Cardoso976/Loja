@@ -11,7 +11,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Alterar Clientes</title>
     </head>
     <body>
         <h1>Alteração de Produto</h1>
@@ -76,7 +76,7 @@
                 </tr>
                 <%conexao.close();%>            
             </table>
-        </form>       
-        
+        </form>
+        <br><a href="listarprodutos.jsp">Voltar ao início</a>            
     </body>
 </html>

@@ -14,10 +14,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Alterar Clientes</title>
     </head>
     <body>
-        <h1>Alterção de Cliente</h1>
+        <h1>Alteração de Cliente</h1>
         <%
         String codigo = request.getParameter("codigo");
 

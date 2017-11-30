@@ -9,7 +9,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script src="js/jQuery.js" type="text/javascript"></script>
-        <title>JSP Page</title>
+        <title>Incluir Produto</title>
     </head>
     <body>
         <%

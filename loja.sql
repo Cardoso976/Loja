@@ -42,17 +42,12 @@ VALUES
 
 INSERT INTO produtos(titulo, autor, url, preco, quantidade_estoque)
 VALUES
-	('Don Quixote','Miguel de Cervantes','img/donquixote.jpg',25.50,15),
-	('Um Conto de Duas Cidades','John Ronald Reuel Tolkien','img/umcontodeduascidades.jpg',22.63,8),
-	('O Senhor dos Aneis','Miguel de Cervantes','img/senhordosaneis.jpg',88.64,5),
-	('O Pequeno Principe','Antoine de Saint-Exupery','img/opequenoprincipe.jpg',12.09,31),	
-	('O Hobbit','John Ronald Reuel Tolkien','img/ohobbit.jpg',82.23,2),
-	('O Caso dos Dez Negrinhos','Agatha Christie','img/deznegrinhos.jpg',107.90,7),
-	('O Sonho da Camara Vermelha','Cao Xueqin','img/shonhodacamaravermelha.jpg',174.90,1),
-	('Ela, a Feiticeira','Henry Rider Haggard','img/elaafeiticeira.jpg',157.12,12),
-	('Harry Potter e a Pedra Filosofal','Joanne Rowling','img/harrypotter.jpg',102.70,3);
-	
-
-SELECT pedidos.codigo, clientes.nome as nome_cliente, produtos.titulo as titulo_produto, pedidos.quantidade_comprada, pedidos.preco_unitario
-FROM ((pedidos INNER JOIN clientes ON clientes.codigo = pedidos.codigo_do_cliente)
-			   INNER JOIN produtos ON produtos.codigo = pedidos.codigo_do_produto);
+	('Don Quixote','Miguel de Cervantes','donquixote.jpg',25.50,15),
+	('Um Conto de Duas Cidades','John Ronald Reuel Tolkien','umcontodeduascidades.jpg',22.63,8),
+	('O Senhor dos Aneis','Miguel de Cervantes','senhordosaneis.jpg',88.64,5),
+	('O Pequeno Principe','Antoine de Saint-Exupery','opequenoprincipe.jpg',12.09,31),	
+	('O Hobbit','John Ronald Reuel Tolkien','ohobbit.jpg',82.23,2),
+	('O Caso dos Dez Negrinhos','Agatha Christie','deznegrinhos.jpg',107.90,7),
+	('O Sonho da Camara Vermelha','Cao Xueqin','shonhodacamaravermelha.jpg',174.90,1),
+	('Ela, a Feiticeira','Henry Rider Haggard','elaafeiticeira.jpg',157.12,12),
+	('Harry Potter e a Pedra Filosofal','Joanne Rowling','harrypotter.jpg',102.70,3);	
