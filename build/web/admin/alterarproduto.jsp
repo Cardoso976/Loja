@@ -34,7 +34,7 @@
             comando.setInt(6, Integer.parseInt(codigo));
 
             if (comando.executeUpdate() > 0) {
-                request.getRequestDispatcher("index.html").forward(request, response);
+                request.getRequestDispatcher("listarprodutos.jsp").forward(request, response);
             } else {
                 out.println("<h3>FALHA NA ALTERAÇÃO</h3>");
             }

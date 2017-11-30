@@ -31,7 +31,7 @@
             if (res.next()) {
                 session.setAttribute("login", res.getString("nome"));
                 session.setAttribute("codigo", res.getInt("codigo"));
-                request.getRequestDispatcher("index.jsp").forward(request, response);                
+                request.getRequestDispatcher("produtos.jsp").forward(request, response);                
             } else {
         %>  
         <h2 style="color:red">

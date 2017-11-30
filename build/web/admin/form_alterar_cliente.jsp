@@ -41,42 +41,42 @@
                 </tr>
                 <tr>
                     <td>Nome</td>
-                    <td><%= res.getString("nome")%>
+                    <td>
                         <input type="text" name="nome" size="50" maxlength="50" 
                         value="<%= res.getString("nome")%>">
                     </td>
                 </tr> 
                 <tr>
                     <td>Endereço</td>
-                    <td><%= res.getString("endereco")%>
+                    <td>
                         <input type="text" name="enderecos" size="50" maxlength="50" 
                         value="<%= res.getString("endereco")%>">
                     </td>
                 </tr>  
                 <tr>
                     <td>Cidade</td>
-                    <td><%= res.getString("cidade")%>
+                    <td>
                         <input type="text" name="cidade" size="30" maxlength="30" 
                         value="<%= res.getString("cidade")%>">
                     </td>
                 </tr>  
                 <tr>
                     <td>Estado</td>
-                    <td><%= res.getString("estado")%>
+                    <td>
                         <input type="text" name="estado" size="50" maxlength="50" 
                         value="<%= res.getString("estado")%>">
                     </td>
                 </tr> 
                 <tr>
                     <td>Email</td>
-                    <td><%= res.getString("email")%>
+                    <td>
                         <input type="text" name="email" size="50" maxlength="50" 
                         value="<%= res.getString("email")%>">
                     </td>
                 </tr>  
                 <tr>
                     <td>Senha</td>
-                    <td><%= res.getString("senha")%>
+                    <td>
                         <input type="text" name="senha" size="50" maxlength="50" 
                         value="<%= res.getString("senha")%>">
                     </td>

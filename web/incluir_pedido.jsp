@@ -20,7 +20,7 @@
 
             if (codigo_cliente != 0) {
                 int codigo_produto = Integer.parseInt(request.getParameter("codigo"));
-                int quantidade = 1;
+                int quantidade = Integer.parseInt(request.getParameter("quantidade"));
                 int quantidade_estoque = Integer.parseInt(request.getParameter("estoque"));
                 Double preco = Double.parseDouble(request.getParameter("preco"));
 

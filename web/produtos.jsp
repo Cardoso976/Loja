@@ -94,11 +94,11 @@
 
                     PreparedStatement comando = conexao.prepareStatement(sql);
                     ResultSet res = comando.executeQuery();
-                    
+
                     String id;
 
                     while (res.next()) {
-                        if(session.getAttribute("codigo")==null){
+                        if (session.getAttribute("codigo") == null) {
                             session.setAttribute("codigo", 0);
                         }
                         out.println("<div class=\"col-md-3 col-sm-6 hero-feature\">");
@@ -107,21 +107,32 @@
                         out.println("<div class=\"caption\">");
                         out.println("<h5><b>" + res.getString("titulo") + "</b></h5>");
                         out.println("<h6>" + res.getString("autor") + "</h6>");
-                        out.println("<p>R$ " + res.getDouble("preco") + "</p>");                       
-                        out.println("<p><a href=incluir_pedido.jsp?codigo="
-                        +res.getInt("codigo")+
-                        "&&preco="+res.getDouble("preco")+
-                        "&&estoque="+res.getInt("quantidade_estoque")+
-                        "&&id="+session.getAttribute("codigo")+
-                        " class=\"btn btn-success\">Compre!</a></p>");
+                        out.println("<h3 style=\"color:green;\"><b>R$ " + res.getDouble("preco") + "</b></h3>");  
+                        out.println("<form role=\"form\" action=\"incluir_pedido.jsp\" method= \"POST\">");                      
+                        out.println("<div class=\"form-group\">");
+                        out.println("<label for=\"sel1\">Quantidade:</label>");
+                        out.println("<select class=\"form-control\" name=\"quantidade\">"+
+                                    "<option value=\"1\">1</option>"+
+                                    "<option value=\"2\">2</option>"+
+                                    "<option value=\"3\">3</option>"+
+                                    "<option value=\"4\">4</option>"+
+                                    "<option value=\"5\">5</option>"+                                    
+                                    "</select>");
+                        out.println("<input type=\"hidden\" name=\"titulo\" value="+res.getString("titulo")+">");
+                        out.println("<input type=\"hidden\" name=\"preco\" value="+res.getDouble("preco")+">");
+                        out.println("<input type=\"hidden\" name=\"id\" value="+session.getAttribute("codigo")+">");
+                        out.println("<input type=\"hidden\" name=\"codigo\" value="+res.getInt("codigo")+">");
+                        out.println("<input type=\"hidden\" name=\"estoque\" value="+res.getInt("quantidade_estoque")+"><br>");
+                        out.println("<button type=\"submit\" class=\"btn btn-success btn-block\">Comprar</button>");
+                    	out.println("</form>");
+                    	out.println("</div>");
                         out.println("</div>");
-                        out.println("</div>");                        
+                        out.println("</div>");
                         out.println("</div>");
                     }
                     conexao.close();
                 %>            
             </div>
-
 
             <footer class="rodape collapse navbar-collapse">
                 <div class="row">
