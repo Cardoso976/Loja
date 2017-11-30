@@ -52,4 +52,7 @@ VALUES
 	('Ela, a Feiticeira','Henry Rider Haggard','img/elaafeiticeira.jpg',157.12,12),
 	('Harry Potter e a Pedra Filosofal','Joanne Rowling','img/harrypotter.jpg',102.70,3);
 	
-	
+
+SELECT pedidos.codigo, clientes.nome as nome_cliente, produtos.titulo as titulo_produto, pedidos.quantidade_comprada, pedidos.preco_unitario
+FROM ((pedidos INNER JOIN clientes ON clientes.codigo = pedidos.codigo_do_cliente)
+			   INNER JOIN produtos ON produtos.codigo = pedidos.codigo_do_produto);
